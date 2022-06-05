@@ -1,0 +1,41 @@
+{
+  "name": "Riffling",
+  "description": "Riffling",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": ["https://*/*"],
+  "options_page": "src/option.html",
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "/images/logo-1.png",
+      "32": "/images/logo-1.png",
+      "48": "/images/logo-1.png",
+      "128": "/images/logo-1.png"
+    }
+  },
+  "icons": {
+    "16": "/images/logo-1.png",
+    "32": "/images/logo-1.png",
+    "48": "/images/logo-1.png",
+    "128": "/images/logo-1.png"
+  },
+  "commands": {
+    "toggle-riffling": {
+      "suggested_key": {
+        "default": "Alt+Shift+1"
+      },
+      "description": "Toggle Riffling Mode"
+    }
+  }
+}

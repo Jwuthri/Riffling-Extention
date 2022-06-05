@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+   <meta charset="UTF-8">
+   <meta name="Smartly" content="Riffling">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+   <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+   <div class="login-box">
+      <h2> Riffling reading</h2>
+      <div class="slidecontainer">
+         <acronym title="Set the Fixation strength, what percentage of the word are highlighted"><p>Fixation Strength:</p></acronym>
+         <input type="range" min="1" max="10" value="5" class="slider" id="Fixation">
+
+         <acronym title="Set the Opacity strength, the font-weight strength"><p>Opacity Strength:</p></acronym>
+         <input type="range" min="1" max="10" value="5" class="slider" id="Opacity">
+
+         <acronym title="Set the Saccades strength, how often do we highlight a word"><p>Saccades Strength:</p></acronym>
+         <input type="range" min="1" max="10" value="5" class="slider" id="Saccades">
+
+         <acronym title="Set the Stopwords strength, the number of words that are considered as stopwords (no meaningful words)"><p>Stopwords Strength:</p></acronym>
+         <input type="range" min="0" max="10" value="5" class="slider" id="Stopwords">
+
+         <acronym title="Set the Rare Words max frequency, the max frquency a word appear in the text to be considered as Important"><p>Max Rare Words Frequency:</p></acronym>
+         <input type="range" min="1" max="10" value="5" class="slider" id="RareWords">
+
+         <acronym title="Set the RareWords Manipulation, how do we highlight the words with little frequency"><label for="RareWordsBehavior">RareWordsBehavior</label></acronym>
+         <select name="RareWordsBehavior" id="RareWordsBehavior">
+            <option value="highlight">highlight</option>
+            <option value="underline">underline</option>
+            <option value="strikethrough">strikethrough</option>
+            <option value="bold" selected>bold</option>
+         </select>
+         <acronym title="Set the Stopwords Manipulation, how do we highlight the no meaningful words"><label for="StopWordsBehavior">StopWordsBehavior</label></acronym>
+         <select name="StopWordsBehavior" id="StopWordsBehavior">
+            <option value="underline">underline</option>
+            <option value="strikethrough">strikethrough</option>
+            <option value="remove">remove</option>
+            <option value="bold">bold</option>
+            <option value="ignore" selected>ignore</option>
+         </select>
+         <br>
+         <br>
+         <button id="Riffling">
+            <span></span><span></span><span></span><span></span>Riffling
+         </button>
+         <script src="popup.js"></script>
+      </div>
+   </div>
+   </body>
+</html>
