@@ -12,26 +12,26 @@
       <h2> Riffling reading</h2>
       <div class="slidecontainer">
          <acronym title="Set the Fixation strength, what percentage of the word are highlighted"><p>Fixation Strength:</p></acronym>
-         <input type="range" min="1" max="10" value="5" class="slider" id="Fixation">
+         <input type="range" min="1" max="10" value="8" class="slider" id="Fixation">
 
          <acronym title="Set the Opacity strength, the font-weight strength"><p>Opacity Strength:</p></acronym>
-         <input type="range" min="1" max="10" value="5" class="slider" id="Opacity">
+         <input type="range" min="1" max="10" value="8" class="slider" id="Opacity">
 
          <acronym title="Set the Saccades strength, how often do we highlight a word"><p>Saccades Strength:</p></acronym>
-         <input type="range" min="1" max="10" value="5" class="slider" id="Saccades">
+         <input type="range" min="1" max="10" value="1" class="slider" id="Saccades">
 
          <acronym title="Set the Stopwords strength, the number of words that are considered as stopwords (no meaningful words)"><p>Stopwords Strength:</p></acronym>
-         <input type="range" min="0" max="10" value="5" class="slider" id="Stopwords">
+         <input type="range" min="0" max="10" value="2" class="slider" id="Stopwords">
 
-         <acronym title="Set the Rare Words max frequency, the max frquency a word appear in the text to be considered as Important"><p>Max Rare Words Frequency:</p></acronym>
-         <input type="range" min="1" max="10" value="5" class="slider" id="RareWords">
+         <acronym title="Set the Rare Words max frequency, the max frequency a word appear in the text to be considered as Important"><p>Max Rare Words Frequency:</p></acronym>
+         <input type="range" min="1" max="10" value="2" class="slider" id="RareWords">
 
          <acronym title="Set the RareWords Manipulation, how do we highlight the words with little frequency"><label for="RareWordsBehavior">RareWordsBehavior</label></acronym>
          <select name="RareWordsBehavior" id="RareWordsBehavior">
-            <option value="highlight">highlight</option>
+            <option value="highlight" selected>highlight</option>
             <option value="underline">underline</option>
             <option value="strikethrough">strikethrough</option>
-            <option value="bold" selected>bold</option>
+            <option value="bold">bold</option>
          </select>
          <acronym title="Set the Stopwords Manipulation, how do we highlight the no meaningful words"><label for="StopWordsBehavior">StopWordsBehavior</label></acronym>
          <select name="StopWordsBehavior" id="StopWordsBehavior">

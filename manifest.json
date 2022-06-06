@@ -10,10 +10,8 @@
     "storage",
     "activeTab",
     "scripting",
-    "alarms",
     "notifications"
   ],
-  "host_permissions": ["https://*/*"],
   "options_page": "src/option.html",
   "action": {
     "default_popup": "src/popup.html",

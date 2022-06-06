@@ -79,7 +79,7 @@ RifflingBtn.addEventListener('click', async () => {
     args: [FixationStrength, SaccadesStrength, OpacityStrength, stopwordStrength, StopwordsList, StopWordsBehavior, RareWordsFreq, RareWordsBehavior]
   })
 
-  // window.close();
+  window.close();
 
 });
 
@@ -87,6 +87,7 @@ RifflingBtn.addEventListener('click', async () => {
 // OnLoading function
 function checkSettings() {
   chrome.storage.local.get(["fixation", "saccades", "opacity", "stopwords", "rareWords", "rareWordsBehavior", "stopWordsBehavior"], (result) => {
+    console.log(document.getElementById('Fixation').value)
     document.getElementById('Fixation').value = result.fixation
     document.getElementById('Saccades').value = result.saccades
     document.getElementById('Opacity').value = result.opacity
@@ -97,11 +98,6 @@ function checkSettings() {
   })
 }
 
-window.onload = () => {
-  checkSettings();
-}
-
-
 // Listeners
 document.getElementById('Fixation').addEventListener('click', setFixation);
 document.getElementById('Saccades').addEventListener('click', setSaccades);
@@ -111,6 +107,10 @@ document.getElementById('RareWords').addEventListener('click', setRareWords);
 document.getElementById('RareWordsBehavior').addEventListener('click', setRareWordsBehavior);
 document.getElementById('StopWordsBehavior').addEventListener('click', setStopWordsBehavior);
 
+
+window.onload = () => {
+  checkSettings();
+}
 
 //////////////////////
 // RIFFLING READING //
@@ -311,7 +311,7 @@ function rifflingReading(fixation, saccades, opacity, stopwords, stopWordsList, 
   }
 
   const style = document.createElement('style');
-  style.textContent = `.s-br s-br {text-decoration: line-through;} .mark-br mark-br {background-color: #243b55; color: #03e9f4; } .u-b u-br {text-decoration: underline;} .bold-br bold-br { font-weight: ${opacity * 100} !important; display: inline; line-height: var(--br-line-height,initial); }  .invisible-br invisible-br {display:none}`;
+  style.textContent = `.u-br u-br {text-decoration: underline;} .s-br s-br {text-decoration: line-through;} .mark-br mark-br {background-color: #243b55; color: #03e9f4; } .bold-br bold-br { font-weight: ${opacity * 100} !important; display: inline; line-height: var(--br-line-height,initial); }  .invisible-br invisible-br {display:none}`;
   document.head.appendChild(style);
 
   const string = concatAllText().toLowerCase();

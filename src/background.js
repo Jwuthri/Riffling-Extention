@@ -1,3 +1,14 @@
+chrome.runtime.onInstalled.addListener(async () => {
+  chrome.storage.local.set({rareWordsBehavior: "bold"});
+  chrome.storage.local.set({stopWordsBehavior: "ignore"});
+  chrome.storage.local.set({rareWords: 2});
+  chrome.storage.local.set({stopwords: 1});
+  chrome.storage.local.set({opacity: 8});
+  chrome.storage.local.set({saccades: 1});
+  chrome.storage.local.set({fixation: 6});
+});
+
+
 chrome.commands.onCommand.addListener(async (command) => {
   if (command === 'toggle-riffling') {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
